@@ -50,7 +50,15 @@
 				"VisualStudioExptTeam.intellicode-api-usage-examples",
 				"wix.vscode-import-cost",
 				"YoavBls.pretty-ts-errors",
-				"vitest.explorer"
+				"vitest.explorer",
+				"VisualStudioExptTeam.vscodeintellicode",
+				"eamodio.gitlens",
+				"toba.vsfire",
+				"ms-vsliveshare.vsliveshare",
+				"ryanrosello-og.playwright-vscode-trace-viewer",
+				"rvest.vs-code-prettier-eslint",
+				"esbenp.prettier-vscode",
+				"timonwong.shellcheck"
 			]
 		}
 	}
