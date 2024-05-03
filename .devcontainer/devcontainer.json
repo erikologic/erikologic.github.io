@@ -50,7 +50,7 @@
 				"VisualStudioExptTeam.intellicode-api-usage-examples",
 				"wix.vscode-import-cost",
 				"YoavBls.pretty-ts-errors",
-				"ZixuanChen.vitest-explorer"
+				"vitest.explorer"
 			]
 		}
 	}
