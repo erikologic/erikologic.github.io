@@ -5,7 +5,8 @@
  
 <nav>
     <a href="{base}/">Home</a>
-    <a href="{base}/about">About</a>
+    <a href="{base}/whoami">Whoami</a>
+    <a href="{base}/blog">Blog</a>
 </nav>
 
 <slot></slot>
