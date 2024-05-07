@@ -8,11 +8,13 @@
 	{#each data.posts as post}
 		<li>
 			<h2>
-				<a href={post.path}>
-					{post.meta.title}
+				<a href="/blog/{post.slug}">
+					{post.title}
 				</a>
 			</h2>
-			Published {post.meta.date}
+			Published {post.date}
 		</li>
 	{/each}
 </ul>
+
+<h2>Total posts: {data.totalPosts.total}</h2>
