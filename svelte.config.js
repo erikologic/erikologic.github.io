@@ -4,13 +4,16 @@ import { mdsvex } from 'mdsvex';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import remarkToc from 'remark-toc';
-
+import autoprefixer
+	from 'autoprefixer';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
 	// for more information about preprocessors
 	preprocess: [
-		vitePreprocess(),
+		vitePreprocess({
+			postcss: { plugin: [autoprefixer] }
+		}),
 		mdsvex({
 			extensions: ['.md'],
 			remarkPlugins: [remarkToc],
