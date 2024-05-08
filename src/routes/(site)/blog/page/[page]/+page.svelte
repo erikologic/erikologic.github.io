@@ -2,7 +2,7 @@
 	export let data;
 </script>
 
-<h1>Blog</h1>
+<h1>Page {data.page}</h1>
 
 <ul>
 	{#each data.posts as post}
@@ -17,5 +17,4 @@
 	{/each}
 </ul>
 
-<h2>Total posts: {data.totalPosts.total}</h2>
-<a href=/blog/page/2>Next page</a>
+<h2>Total posts: {data.totalPosts}</h2>
