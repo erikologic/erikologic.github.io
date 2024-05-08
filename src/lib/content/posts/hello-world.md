@@ -10,6 +10,6 @@ coverHeight: 5
 excerpt: Let' begin!
 ---
 
-Hello, world!
+# Hello, world!
 
 Remember to leave a ref to [Josh Collinsworth blog](https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog)!

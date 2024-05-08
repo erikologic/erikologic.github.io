@@ -3,7 +3,6 @@
 	import { fade } from 'svelte/transition';
 
 	export let data;
-	console.log(data.currentRoute);
 </script>
 
 <nav>
