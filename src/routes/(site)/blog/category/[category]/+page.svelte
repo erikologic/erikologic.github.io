@@ -1,4 +1,6 @@
 <script>
+	import { base } from '$app/paths';
+	
 	export let data;
 </script>
 
@@ -8,7 +10,7 @@
 	{#each data.posts as post}
 		<li>
 			<h2>
-				<a href="/blog/{post.slug}">
+				<a href="{base}/blog/{post.slug}">
 					{post.title}
 				</a>
 			</h2>

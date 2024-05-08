@@ -1,4 +1,6 @@
 <script>
+	import { base } from '$app/paths';
+
 	export let data;
 </script>
 
@@ -8,7 +10,7 @@
 	{#each data.posts as post}
 		<li>
 			<h2>
-				<a href="/blog/{post.slug}">
+				<a href="{base}/blog/{post.slug}">
 					{post.title}
 				</a>
 			</h2>
@@ -18,6 +20,6 @@
 </ul>
 
 <h2>Total posts: {data.totalPosts.total}</h2>
-<a href="/blog/page/2">Next page</a>
+<a href="{base}/blog/page/2">Next page</a>
 
-<a href="/blog/category">Categories</a>
+<a href="{base}/blog/category">Categories</a>

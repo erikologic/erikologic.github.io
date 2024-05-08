@@ -1,3 +1,5 @@
+import { base } from '$app/paths';
+
 import { redirect } from '@sveltejs/kit';
 import { fetchPosts } from '$lib/assets/js/utils';
 
@@ -12,7 +14,7 @@ export const load = async ({ params, fetch }) => {
 	const offset = page * 10 - 10;
 	const posts = await fetchPosts({ offset, limit: 10 });
 
-	const count = await fetch(`/api/posts/count`);
+	const count = await fetch(`${base}/api/posts/count`);
 	const { total } = await count.json();
 
 	return {
