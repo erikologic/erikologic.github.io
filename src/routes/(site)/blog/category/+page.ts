@@ -1,6 +1,8 @@
+import { base } from '$app/paths';
+
 // TODO: types
 export const load = async ({ fetch }) => {
-	const res = await fetch(`/api/posts/all`);
+	const res = await fetch(`${base}/api/posts/all`);
 	const posts = await res.json();
 
 	let uniqueCategories = {};

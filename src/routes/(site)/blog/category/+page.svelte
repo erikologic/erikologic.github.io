@@ -1,4 +1,6 @@
 <script>
+	import { base } from '$app/paths';
+
 	export let data;
 </script>
 
@@ -8,7 +10,7 @@
 	{#each data.uniqueCategories as category}
 		<li>
 			<h2>
-				<a href="/blog/category/{category.title}">
+				<a href="{base}/blog/category/{category.title}">
 					{category.title}
 				</a>: {category.count}
 			</h2>
