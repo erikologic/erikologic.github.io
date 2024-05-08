@@ -9,7 +9,7 @@ interface MarkdownPost {
 
 export const load = async ({ params }): Promise<MarkdownPost> => {
 	try {
-		const post: SvelteComponent = await import(`../../../lib/content/posts/${params.post}.md`);
+		const post: SvelteComponent = await import(`../../../../lib/content/posts/${params.post}.md`);
 
 		if (post) {
 			return {

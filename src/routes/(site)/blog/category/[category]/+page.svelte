@@ -2,7 +2,7 @@
 	export let data;
 </script>
 
-<h1>Blog</h1>
+<h1>Category {data.category}</h1>
 
 <ul>
 	{#each data.posts as post}
@@ -16,8 +16,3 @@
 		</li>
 	{/each}
 </ul>
-
-<h2>Total posts: {data.totalPosts.total}</h2>
-<a href="/blog/page/2">Next page</a>
-
-<a href="/blog/category">Categories</a>
