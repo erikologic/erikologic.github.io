@@ -1,6 +1,7 @@
 // TODO: types
 import type Post from '$lib/types/post';
 import { fetchPosts } from '$lib/assets/js/utils';
+import config from '$lib/config';
 
 export const GET = async () => {
 	const data = await fetchPosts({ limit: -1 });
@@ -14,12 +15,6 @@ export const GET = async () => {
 		status: 200,
 		headers
 	});
-};
-
-const config = {
-	title: 'Enrico Graziani',
-	description: 'Enrico Graziani',
-	domain: 'https://fixme.com'
 };
 
 const render = (posts: Post[]): string => `<?xml version="1.0" encoding="UTF-8" ?>
