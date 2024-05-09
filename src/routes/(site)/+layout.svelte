@@ -1,9 +1,17 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { fade } from 'svelte/transition';
+	import { page } from '$app/stores';
+
+	import config from '$lib/config';
 
 	export let data;
 </script>
+
+<svelte:head>
+	<title>{$page.data.meta.title} - {config.title}</title>
+	<meta property="og:title" content={$page.data.meta.title} />
+</svelte:head>
 
 <nav>
 	<a href="{base}/">Home</a>
