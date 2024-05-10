@@ -10,6 +10,10 @@ export const load = async ({ fetch }) => {
 	const total = await count.json();
 	return {
 		posts,
-		totalPosts: total
+		totalPosts: total,
+		meta: {
+			title: "Blog",
+			description: "List of blog pages"
+		}
 	};
 };

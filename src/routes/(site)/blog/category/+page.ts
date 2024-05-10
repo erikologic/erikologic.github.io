@@ -23,6 +23,10 @@ export const load = async ({ fetch }) => {
 	const sortedUniqueCategories = Object.values(uniqueCategories).sort((a, b) => a.title > b.title);
 
 	return {
-		uniqueCategories: sortedUniqueCategories
+		uniqueCategories: sortedUniqueCategories,
+		meta: {
+			title: "Blog Categories",
+			description: "List of blog categories"
+		}
 	};
 };

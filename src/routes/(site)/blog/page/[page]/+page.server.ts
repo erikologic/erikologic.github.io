@@ -20,6 +20,10 @@ export const load = async ({ params, fetch }) => {
 	return {
 		posts,
 		page,
-		totalPosts: total
+		totalPosts: total,
+		meta: {
+			title: `Blog - Page ${page}`,
+			description: `List of blog pages - Page ${page}`
+		}
 	};
 };

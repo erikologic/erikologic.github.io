@@ -30,7 +30,7 @@ ${posts
 <guid isPermaLink="true">${config.domain}/blog/${post.slug}</guid>
 <title>${post.title}</title>
 <link>${config.domain}/blog/${post.slug}</link>
-<description>${post.excerpt}</description>
+<description>${post.description}</description>
 <pubDate>${new Date(post.date).toUTCString()}</pubDate>
 </item>`
 	)
