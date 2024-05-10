@@ -42,7 +42,7 @@ const fetchPosts = async ({
 	const finalPosts = sortedPosts.map((post) => ({
 		title: post.title,
 		slug: post.slug,
-		excerpt: post.excerpt,
+		description: post.description,
 		coverImage: post.coverImage,
 		date: post.date,
 		categories: post.categories

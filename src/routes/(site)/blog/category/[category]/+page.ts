@@ -6,6 +6,10 @@ export const load = async ({ params }) => {
 
 	return { 
 		posts,
-		category
+		category,
+		meta: {
+			title: `Blog Category: ${category}`, 
+			description: `List of blog pages in category: ${category}`
+		}
 	}
 }

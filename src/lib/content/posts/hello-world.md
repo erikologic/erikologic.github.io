@@ -7,7 +7,7 @@ categories:
 coverImage: 'None.png'
 coverWidth: 9
 coverHeight: 5
-excerpt: Let' begin!
+description: Let' begin!
 ---
 
 # Hello, world!
