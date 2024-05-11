@@ -61,7 +61,8 @@
 				"ryanrosello-og.playwright-vscode-trace-viewer",
 				"rvest.vs-code-prettier-eslint",
 				"esbenp.prettier-vscode",
-				"timonwong.shellcheck"
+				"timonwong.shellcheck",
+				"fivethree.vscode-svelte-snippets"
 			]
 		}
 	}
