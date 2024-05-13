@@ -1,7 +1,7 @@
 ---
 title: 'test19'
-date: '2024-04-19'
-categories:
+publishedDate: '2024-04-19'
+tags:
   - test1
 coverImage: 'None.png'
 description: test19

@@ -1,7 +1,7 @@
 ---
 title: 'test8'
-date: '2024-04-08'
-categories:
+publishedDate: '2024-04-08'
+tags:
   - test8
 coverImage: 'None.png'
 description: test8

@@ -1,8 +1,8 @@
 ---
 title: 'UK SIM Card for Expats'
-date: '2024-05-12'
-updated: '2024-05-12'
-categories:
+publishedDate: '2024-05-12'
+modifiedDate: '2024-05-12'
+tags:
   - personal
   - travel
 coverImage: 'None.png'

@@ -1,8 +1,8 @@
 ---
 title: 'Hello World'
-date: '2024-05-04'
-updated: '2024-05-04'
-categories:
+publishedDate: '2024-05-04'
+modifiedDate: '2024-05-04'
+tags:
   - personal
 coverImage: 'None.png'
 coverWidth: 9
