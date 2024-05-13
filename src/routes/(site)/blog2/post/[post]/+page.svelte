@@ -13,7 +13,5 @@
 <article>
 	<h1>{data.meta.title}</h1>
 	<p>Published: {data.meta.publishedDate}</p>
-	<!-- TODO
-    <svelte:component this={data.PostContent} /> 
-    -->
+	<svelte:component this={data.PostContent} />
 </article>

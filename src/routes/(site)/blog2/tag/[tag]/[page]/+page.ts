@@ -1,5 +1,5 @@
 // import type { BasePageData } from '$lib/types/basePageData';
-import { getPosts } from '$lib/assets/js/utils/posts';
+import { getPosts } from '$lib/assets/js/utils/posts2';
 
 // export const load = async ({ params }): Promise<BasePageData> => {
 export const load = async ({ params }) => {
