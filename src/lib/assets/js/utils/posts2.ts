@@ -1,3 +1,5 @@
+import type { SvelteComponent } from "svelte";
+
 interface Post {
 	title: string;
 	slug: string;
