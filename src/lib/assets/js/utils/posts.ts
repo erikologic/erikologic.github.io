@@ -19,16 +19,22 @@ const posts = [
 	}
 ];
 
+// TODO count tags from articles
 const tags = new Set(posts.flatMap((p) => p.tags));
 
+interface GetPostsOptions {
+	tag?: string;
+	page?: number;
+	limit?: number;
+}
 const defaultOptions = {
-	tags: 'all',
+	tag: 'all',
 	page: 1,
-	pageSize: 10
+	limit: 10
 };
-
-export const getPosts = async ({ tags, page, pageSize } = defaultOptions) => {
-	return posts.slice((page - 1) * pageSize, page * pageSize);
+export const getPosts = async (opts: GetPostsOptions) => {
+	const { tag, page, limit } = { ...defaultOptions, ...opts };
+	return posts.slice((page - 1) * limit, page * limit);
 };
 
 interface GetPostOptions {

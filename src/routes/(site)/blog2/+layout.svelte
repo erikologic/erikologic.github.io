@@ -5,7 +5,7 @@
 </script>
 
 <!-- TODO Breadcrumbs -->
-<h1>Blog -> Tags: ALL -> Page 1</h1>
+<h1>Blog -> Tag: ALL -> Page 1</h1>
 
 <aside>
 	<h2>Most recent posts</h2>
@@ -16,11 +16,11 @@
 			</li>
 		{/each}
 	</ul>
-	<h2><a href="{base}/blog2/tags">Tags</a></h2>
+	<h2><a href="{base}/blog2/tag">Tags</a></h2>
 	<ul>
 		{#each data.tags as tag}
 			<li>
-				<a href="{base}/blog2/tags/{tag}/1">{tag}</a>
+				<a href="{base}/blog2/tag/{tag}/1">{tag}</a>
 			</li>
 		{/each}
 	</ul>
