@@ -1,10 +1,9 @@
 // TODO: types
-import type Post from '$lib/types/post';
-import { fetchPosts } from '$lib/assets/js/utils';
 import config from '$lib/config';
+import { getPosts, type Post } from '$lib/assets/js/utils/posts';
 
 export const GET = async () => {
-	const data = await fetchPosts({ limit: -1 });
+	const data = await getPosts({});
 
 	const body: string = render(data);
 	const headers = {
@@ -31,7 +30,7 @@ ${posts
 <title>${post.title}</title>
 <link>${config.domain}/blog/${post.slug}</link>
 <description>${post.description}</description>
-<pubDate>${new Date(post.date).toUTCString()}</pubDate>
+<pubDate>${new Date(post.publishedDate).toUTCString()}</pubDate>
 </item>`
 	)
 	.join('')}
