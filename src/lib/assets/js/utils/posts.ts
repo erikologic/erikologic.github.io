@@ -5,16 +5,16 @@ const posts = [
 		slug: 'hello-world',
 		title: 'Hello World',
 		description: 'This is the first post on this blog',
-		publishedTime: '2021-01-01',
-		modifiedTime: '2021-01-01',
+		publishedDate: '2021-01-01',
+		modifiedDate: '2021-01-01',
 		tags: ['personal']
 	},
 	{
 		slug: 'foo-bar',
 		title: 'Foo Bar',
 		description: 'This is a foo bar',
-		publishedTime: '2019-01-01',
-		modifiedTime: '2019-01-01',
+		publishedDate: '2019-01-01',
+		modifiedDate: '2019-01-01',
 		tags: ['foo-bar']
 	}
 ];

@@ -12,7 +12,7 @@
 					{post.title}
 				</a>
 			</h2>
-			Published {post.publishedTime}
+			Published {post.publishedDate}
 			<p>{post.description}</p>
 			<ul>
 				{#each post.tags as tag}
