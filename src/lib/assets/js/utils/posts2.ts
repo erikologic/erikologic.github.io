@@ -1,15 +1,15 @@
-import type { SvelteComponent } from "svelte";
+import { z } from 'zod';
 
-interface Post {
-	title: string;
-	slug: string;
-	description: string;
-	publishedDate: string;
-	modifiedDate: string;
-	tags: string[];
-	PostContent: SvelteComponent;
-}
-
+const postSchema = z.object({
+	title: z.string(),
+	slug: z.string(),
+	description: z.string(),
+	publishedDate: z.string(),
+	modifiedDate: z.string().optional(),
+	tags: z.array(z.string()),
+	PostContent: z.any()
+});
+type Post = z.infer<typeof postSchema>;
 const posts: Post[] = Object.entries(
 	import.meta.glob(`../../../content/posts2/*.md`, { eager: true })
 )
@@ -17,10 +17,23 @@ const posts: Post[] = Object.entries(
 		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		([path, data]: [string, any]) => {
 			const slug = path.split('/').pop()!.split('.').shift();
-			return { ...data.metadata, slug, PostContent: data.default };
+			try {
+				return postSchema.parse({ ...data.metadata, slug, PostContent: data.default });
+			} catch (e) {
+				console.error(`Error parsing metadata for post ${slug}: ${e}`);
+				throw e;
+			}
 		}
 	)
 	.sort((a, b) => b.publishedDate.localeCompare(a.publishedDate));
+
+const postsBySlug = posts.reduce(
+	(acc, post) => {
+		acc[post.slug] = post;
+		return acc;
+	},
+	{} as { [key: string]: Post }
+);
 
 const tagKeyToCount = posts
 	.flatMap((post) => post.tags)
@@ -37,6 +50,7 @@ interface Tag {
 }
 const tags: Tag[] = Object.entries(tagKeyToCount)
 	.map(([tag, count]) => ({ tag, count }))
+	.sort((a, b) => a.tag.localeCompare(b.tag))
 	.sort((a, b) => b.count - a.count);
 
 interface GetPostsOptions {
@@ -56,18 +70,15 @@ export const getPosts = async (opts: GetPostsOptions) => {
 		.slice((page - 1) * limit, page * limit);
 };
 
+
 interface GetPostOptions {
 	post: string;
 }
-export const getPost = async ({ post }: GetPostOptions) => posts.find((p) => p.slug === post);
+export const getPost = async ({ post }: GetPostOptions) => postsBySlug[post];
 
 interface GetTagsOptions {
 	limit?: number;
 }
-const defaultTagsOptions = {
-	limit: undefined
-};
-export const getTags = async ({ limit }: GetTagsOptions) => {
-	const options = { ...defaultTagsOptions, limit };
+export const getTags = async (options: GetTagsOptions) => {
 	return Array.from(tags).slice(0, options.limit);
 };
