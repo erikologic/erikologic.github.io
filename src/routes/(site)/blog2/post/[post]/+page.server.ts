@@ -16,8 +16,8 @@ export const load = async ({ params: { post } }) => {
 			title: myPost.title,
 			description: myPost.description,
 			tags: myPost.tags,
-			publishedTime: myPost.publishedTime,
-			modifiedTime: myPost.modifiedTime
+			publishedDate: myPost.publishedDate,
+			modifiedDate: myPost.modifiedDate
 		},
 		// TODO
 		PostContent: undefined
