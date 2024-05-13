@@ -19,8 +19,22 @@ const posts = [
 	}
 ];
 
-// TODO count tags from articles
-const tags = new Set(posts.flatMap((p) => p.tags));
+const tagKeyToCount = posts
+	.flatMap((post) => post.tags)
+	.reduce(
+		(acc, tag) => {
+			acc[tag] = (acc[tag] || 0) + 1;
+			return acc;
+		},
+		{} as { [key: string]: number }
+	);
+interface Tag {
+	tag: string;
+	count: number;
+}
+const tags: Tag[] = Object.entries(tagKeyToCount)
+	.map(([tag, count]) => ({ tag, count }))
+	.sort((a, b) => b.count - a.count);
 
 interface GetPostsOptions {
 	tag?: string;
@@ -44,4 +58,13 @@ interface GetPostOptions {
 }
 export const getPost = async ({ post }: GetPostOptions) => posts.find((p) => p.slug === post);
 
-export const getTags = async () => tags;
+interface GetTagsOptions {
+	limit?: number;
+}
+const defaultTagsOptions = {
+	limit: undefined
+};
+export const getTags = async ({ limit }: GetTagsOptions) => {
+	const options = { ...defaultTagsOptions, limit };
+	return Array.from(tags).slice(0, options.limit);
+};
