@@ -34,7 +34,9 @@ const defaultOptions = {
 };
 export const getPosts = async (opts: GetPostsOptions) => {
 	const { tag, page, limit } = { ...defaultOptions, ...opts };
-	return posts.slice((page - 1) * limit, page * limit);
+	return posts
+		.filter((p) => tag === 'all' || p.tags.includes(tag))
+		.slice((page - 1) * limit, page * limit);
 };
 
 interface GetPostOptions {
