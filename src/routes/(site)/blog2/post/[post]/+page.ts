@@ -1,7 +1,7 @@
 // import type { BasePageData } from '$lib/types/basePageData';
 import { error } from '@sveltejs/kit';
 
-import { getPost } from '$lib/assets/js/utils/posts';
+import { getPost } from '$lib/assets/js/utils/posts2';
 
 // export const load = async ({ params }): Promise<BasePageData> => {
 export const load = async ({ params: { post } }) => {
@@ -19,7 +19,6 @@ export const load = async ({ params: { post } }) => {
 			publishedDate: myPost.publishedDate,
 			modifiedDate: myPost.modifiedDate
 		},
-		// TODO
-		PostContent: undefined
+		PostContent: myPost.PostContent
 	};
 };

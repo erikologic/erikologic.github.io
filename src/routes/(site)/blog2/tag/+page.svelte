@@ -8,7 +8,7 @@
 	{#each data.tags as { tag, count }}
 		<ul>
 			<li>
-				<a href="{base}/blog2/tag/{tag}/1">{tag}</a>: {count}
+				<a href="{base}/blog2/tag/{tag}">{tag}</a>: {count}
 			</li>
 		</ul>
 	{/each}

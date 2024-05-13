@@ -1,23 +1,24 @@
-// TODO this should come from the list of articles!
-// It is safe to store things in memory here because we are building for a static site
-const posts = [
-	{
-		slug: 'hello-world',
-		title: 'Hello World',
-		description: 'This is the first post on this blog',
-		publishedDate: '2021-01-01',
-		modifiedDate: '2021-01-01',
-		tags: ['personal']
-	},
-	{
-		slug: 'foo-bar',
-		title: 'Foo Bar',
-		description: 'This is a foo bar',
-		publishedDate: '2019-01-01',
-		modifiedDate: '2019-01-01',
-		tags: ['foo-bar']
-	}
-];
+interface Post {
+	title: string;
+	slug: string;
+	description: string;
+	publishedDate: string;
+	modifiedDate: string;
+	tags: string[];
+	PostContent: SvelteComponent;
+}
+
+const posts: Post[] = Object.entries(
+	import.meta.glob(`../../../content/posts2/*.md`, { eager: true })
+)
+	.map(
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
+		([path, data]: [string, any]) => {
+			const slug = path.split('/').pop()!.split('.').shift();
+			return { ...data.metadata, slug, PostContent: data.default };
+		}
+	)
+	.sort((a, b) => b.publishedDate.localeCompare(a.publishedDate));
 
 const tagKeyToCount = posts
 	.flatMap((post) => post.tags)
