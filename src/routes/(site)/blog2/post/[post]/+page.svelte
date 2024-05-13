@@ -6,7 +6,7 @@
 	<meta property="article:section" content={data.meta.tags[0]} />
 	<meta property="article:tag" content={data.meta.tags.join(',')} />
 	<meta property="article:published_time" content={data.meta.publishedTime} />
-	<meta property="article:modified_time" content={data.meta.modifiedTime} /> 
+	<meta property="article:modified_time" content={data.meta.modifiedTime} />
 </svelte:head>
 
 <article>
