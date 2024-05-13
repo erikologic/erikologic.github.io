@@ -12,7 +12,6 @@ export const load = async ({ params: { post } }) => {
 		});
 	}
 	return {
-		// TODO move in getPost
 		meta: {
 			title: myPost.title,
 			description: myPost.description,
