@@ -32,6 +32,7 @@
 		{/if}
 
 		<!-- TODO at some point this should be capped -->
+		<!-- TODO center and higlight the current page -->
 		{#each Array.from({ length: data.totalPages }, (_, i) => i + 1) as page}
 			<a href="{base}/blog/tag/{data.tags}/{page}">{page}</a>
 		{/each}

@@ -14,7 +14,7 @@ export const load = async ({ params }) => {
 		posts,
 		tag,
 		page,
-		// TODO count pages from articles
-		totalPages: 20
+		// TODO avoid magic numbers
+		totalPages: Math.ceil(posts.length / 10)
 	};
 };
