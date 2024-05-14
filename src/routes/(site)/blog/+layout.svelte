@@ -5,7 +5,7 @@
 </script>
 
 <!-- TODO Breadcrumbs -->
-<h1>Blog -> Tag: ALL -> Page 1</h1>
+<!-- <h1>Blog -> Tag: ALL -> Page 1</h1> -->
 
 <aside>
 	<h2>Most recent posts</h2>

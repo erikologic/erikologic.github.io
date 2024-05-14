@@ -5,9 +5,6 @@ modifiedDate: '2024-05-12'
 tags:
   - personal
   - travel
-coverImage: 'None.png'
-coverWidth: 9
-coverHeight: 5
 description: Need a SIM card to keep your UK number while abroad? Here is a comparison, and why I picked Asda.
 ---
 
