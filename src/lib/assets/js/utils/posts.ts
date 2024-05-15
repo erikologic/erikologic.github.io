@@ -7,6 +7,10 @@ const postSchema = z.object({
 	publishedDate: z.string(),
 	modifiedDate: z.string().optional(),
 	tags: z.array(z.string()),
+	imageFile: z.string().optional(),
+	imageAlt: z.string().optional(),
+	imageWidth: z.number().optional(),
+	imageHeight: z.number().optional(),
 	PostContent: z.any()
 });
 

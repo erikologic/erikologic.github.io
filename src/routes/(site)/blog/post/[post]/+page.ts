@@ -17,7 +17,15 @@ export const load = async ({ params: { post } }) => {
 			description: myPost.description,
 			tags: myPost.tags,
 			publishedDate: myPost.publishedDate,
-			modifiedDate: myPost.modifiedDate
+			modifiedDate: myPost.modifiedDate,
+			...(myPost.imageFile && {
+				image: {
+					url: myPost.imageFile,
+					alt: myPost.imageAlt,
+					width: myPost.imageWidth,
+					height: myPost.imageHeight
+				}
+			})
 		},
 		PostContent: myPost.PostContent
 	};

@@ -5,6 +5,10 @@ modifiedDate: '2024-05-04'
 tags:
   - personal
 description: Let' begin!
+imageFile: hello-world.webp
+imageAlt: Hello, world!
+imageWidth: 1600
+imageHeight: 681
 ---
 
 # Hello, world!

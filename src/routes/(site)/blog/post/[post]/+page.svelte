@@ -13,5 +13,15 @@
 <article>
 	<h1>{data.meta.title}</h1>
 	<p>Published: {data.meta.publishedDate}</p>
+	<div class="hero-image">
+		<enhanced:img src="$lib/content/images/hello-world.webp" alt={data.meta.image.alt} />
+	</div>
 	<svelte:component this={data.PostContent} />
 </article>
+
+<style>
+	.hero-image img {
+		width: 70vw;
+		height: auto;
+	}
+</style>
