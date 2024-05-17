@@ -2,10 +2,10 @@
 import { error } from '@sveltejs/kit';
 
 import { getPost } from '$lib/assets/js/utils/posts';
-import { getImageUrl } from '$lib/assets/js/utils/images';
+import { getEnhancendImage, getImageUrl } from '$lib/assets/js/utils/images';
 
 // export const load = async ({ params }): Promise<BasePageData> => {
-export const load = async ({ params: { post } }) => {
+export const load = async ({ params: { post }, url }) => {
 	const myPost = await getPost({ post });
 	if (!myPost) {
 		error(404, {
@@ -21,13 +21,17 @@ export const load = async ({ params: { post } }) => {
 			modifiedDate: myPost.modifiedDate,
 			...(myPost.imageFile && {
 				image: {
-					url: getImageUrl(myPost.imageFile),
+					url: url.origin + getImageUrl(myPost.imageFile),
 					alt: myPost.imageAlt,
 					width: myPost.imageWidth,
 					height: myPost.imageHeight
 				}
 			})
 		},
-		PostContent: myPost.PostContent
+		PostContent: myPost.PostContent,
+		// TODO fix types - this is horrible mainly because of that!
+		...(myPost.imageFile && {
+			EnhancedImage: getEnhancendImage(myPost.imageFile)
+		})
 	};
 };
