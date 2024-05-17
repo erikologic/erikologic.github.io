@@ -24,13 +24,13 @@
 	<meta property="twitter:description" content={$page.data.meta.description} />
 	<meta property="og:type" content={$page.data.meta.type || "website"} />
 
-	{#if $page.data.meta.image}
+	<!-- {#if $page.data.meta.image}
 		<meta property="og:image" content={$page.data.meta.image.url} />
 		<meta property="og:image:secure_url" content={$page.data.meta.image.url} />
 		<meta property="twitter:image" content={$page.data.meta.image.url} />
 		<meta property="og:image:width" content={$page.data.meta.image.width} />
 		<meta property="og:image:height" content={$page.data.meta.image.height} />
-	{/if}
+	{/if} -->
 
 	{#if config.twitterHandle}
 		<meta property="twitter:site" content={config.twitterHandle} />
