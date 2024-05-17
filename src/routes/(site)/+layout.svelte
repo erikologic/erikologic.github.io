@@ -41,6 +41,7 @@
 	<a href="{base}/">Home</a>
 	<a href="{base}/whoami">Whoami</a>
 	<a href="{base}/blog">Blog</a>
+	<a href="{base}/api/rss.xml">RSS</a>
 </nav>
 
 {#key data.currentRoute}
