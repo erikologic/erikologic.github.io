@@ -2,6 +2,7 @@
 import { error } from '@sveltejs/kit';
 
 import { getPost } from '$lib/assets/js/utils/posts';
+import { getImageUrl } from '$lib/assets/js/utils/images';
 
 // export const load = async ({ params }): Promise<BasePageData> => {
 export const load = async ({ params: { post } }) => {
@@ -17,7 +18,15 @@ export const load = async ({ params: { post } }) => {
 			description: myPost.description,
 			tags: myPost.tags,
 			publishedDate: myPost.publishedDate,
-			modifiedDate: myPost.modifiedDate
+			modifiedDate: myPost.modifiedDate,
+			...(myPost.imageFile && {
+				image: {
+					url: getImageUrl(myPost.imageFile),
+					alt: myPost.imageAlt,
+					width: myPost.imageWidth,
+					height: myPost.imageHeight
+				}
+			})
 		},
 		PostContent: myPost.PostContent
 	};

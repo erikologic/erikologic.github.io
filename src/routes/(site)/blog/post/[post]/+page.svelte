@@ -13,5 +13,17 @@
 <article>
 	<h1>{data.meta.title}</h1>
 	<p>Published: {data.meta.publishedDate}</p>
+	{#if data.meta.image}
+		<div class="hero-image">
+			<enhanced:img src={data.meta.image.url} alt={data.meta.image.alt} />
+		</div>
+	{/if}
 	<svelte:component this={data.PostContent} />
 </article>
+
+<style>
+	.hero-image img {
+		width: 70vw;
+		height: auto;
+	}
+</style>
