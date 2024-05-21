@@ -1,6 +1,22 @@
-<h1>Hey there 👋👋👋</h1>
+<!-- <h1>Hey there 👋👋👋</h1>
 
 <p>
     Not the best sight is it?!<br/>
     Well, I have been procrastinating this for years so let's just ship something and iterate...<br/>
-</p>
+</p> -->
+
+<script>
+	import { Avatar } from '@skeletonlabs/skeleton';
+</script>
+
+<div class="container mx-auto p-8 space-y-8">
+	<Avatar src="https://i.pravatar.cc/" />
+
+	<h1 class="h1">Hello Skeleton</h1>
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+	<section>
+		<a class="btn variant-filled-primary" href="https://kit.svelte.dev/">SvelteKit</a>
+		<a class="btn variant-filled-secondary" href="https://tailwindcss.com/">Tailwind</a>
+		<a class="btn variant-filled-tertiary" href="https://github.com/">GitHub</a>
+	</section>
+</div>
