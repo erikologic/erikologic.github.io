@@ -29,7 +29,7 @@
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "npm install",
 	"updateContentCommand": "npm install",
-	"postAttachCommand": "npm run dev",
+	"postAttachCommand": "npm run dev -- --host 0.0.0.0 ",
 
 	// Configure tool-specific properties.
 	"customizations": {
