@@ -5,6 +5,8 @@
 
 	import config from '$lib/config';
 
+	import '../../app.css';
+
 	export let data;
 </script>
 
