@@ -1,5 +1,4 @@
 <script lang="ts">
-	import '../../app.css';
 	import { base } from '$app/paths';
 	import { fade } from 'svelte/transition';
 	import { page } from '$app/stores';
@@ -38,7 +37,7 @@
 	{/if}
 </svelte:head>
 
-<!-- <nav>
+<nav>
 	<a href="{base}/">Home</a>
 	<a href="{base}/whoami">Whoami</a>
 	<a href="{base}/blog">Blog</a>
@@ -49,21 +48,4 @@
 	<main in:fade={{ duration: 150, delay: 150 }} out:fade={{ duration: 150 }}>
 		<slot />
 	</main>
-{/key} -->
-
-<div class="min-h-screen flex flex-col">
-	<header class="bg-red-400">
-		<nav class="navbar bg-base-100 flex justify-center">
-			<a class="btn btn-ghost text-xl" href="{base}/">Home</a>
-			<a class="btn btn-ghost text-xl" href="{base}/whoami">Whoami</a>
-			<a class="btn btn-ghost text-xl" href="{base}/blog">Blog</a>
-		</nav>
-	</header>
-
-	<slot />
-
-	<!-- TODO RSS is only relevant for the blog -->
-	<!-- <footer class="">
-		<a href="{base}/api/rss.xml">RSS</a>
-	</footer> -->
-</div>
+{/key}
