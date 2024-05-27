@@ -38,6 +38,7 @@ I went to search for all the operators that offers PAYG plans of ~ £10 / 10GB 5
 I found the following operators, and refined googling their policies.
 
 - Asda
+
   - Plan: £10 x 15GB & 5G /month
   - Network: Vodafone
   - EU roaming: free / SIM card can be used in EU outside of a plan
@@ -45,6 +46,7 @@ I found the following operators, and refined googling their policies.
   - Fair usage: _"If, during any 4 month period, ... your corresponding roaming usage exceeds your usage within the UK, .. additional roaming charges will be: £0.033 per minute for calls, £0.01p per SMS/MMS and £3.13 per 1GB of data"_
 
 - Lebara
+
   - Plan: £10 x 20GB & 5G /month
   - Expiry: After 90 days of inactivity you need to top up or buy a plan, after 1 year of inactivity the SIM will expire
   - Network: Vodafone
@@ -66,7 +68,7 @@ I found the following operators, and refined googling their policies.
 
 These operators fair usage policies are unadvantageous:
 
-- TalkMobile: _"If you roam in any Inclusive Roaming destination for 61 or more days in a 120 day period  (“Permanently Roaming”) ... you’ll be charged a surcharge of £7 per week for as long as you are Permanently Roaming."_
+- TalkMobile: _"If you roam in any Inclusive Roaming destination for 61 or more days in a 120 day period (“Permanently Roaming”) ... you’ll be charged a surcharge of £7 per week for as long as you are Permanently Roaming."_
 - TalkHome: _"SUPPORT: The roaming limit is 12 weeks."_
 
 These operators do not seem to offer out of bundle usage option:

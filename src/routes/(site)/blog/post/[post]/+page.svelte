@@ -21,6 +21,7 @@
 	<svelte:component this={data.PostContent} />
 </article>
 
+<!-- svelte-ignore css-unused-selector -->
 <style>
 	.hero-image img {
 		width: 70vw;

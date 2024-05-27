@@ -15,15 +15,13 @@
 	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [
-		5173
-	],
+	"forwardPorts": [5173],
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
-			// To run Sonarlint
-			"ghcr.io/devcontainers/features/java:1": {},
-			"ghcr.io/devcontainers/features/git-lfs:1": {}
+		// To run Sonarlint
+		"ghcr.io/devcontainers/features/java:1": {},
+		"ghcr.io/devcontainers/features/git-lfs:1": {}
 	},
 
 	// Use 'postCreateCommand' to run commands after the container is created.
