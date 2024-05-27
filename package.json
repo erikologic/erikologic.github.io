@@ -54,8 +54,8 @@
 	"type": "module",
 	"lint-staged": {
 		"*": [
-			"npm run format",
-			"npm run lint"
+			"prettier --ignore-unknown --write ",
+			"eslint --fix "
 		]
 	}
 }
