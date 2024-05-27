@@ -39,15 +39,25 @@
 	{/if}
 </svelte:head>
 
-<nav>
-	<a href="{base}/">Home</a>
-	<a href="{base}/whoami">Whoami</a>
-	<a href="{base}/blog">Blog</a>
-	<a href="{base}/api/rss.xml">RSS</a>
+<nav class="mb-4">
+	<ul class="flex justify-center">
+		<li class="px-3 py-1 transition hover:scale-105 hover:text-teal-500">
+			<a href="{base}/">Home</a>
+		</li>
+		<li class="px-3 py-1 transition hover:scale-105 hover:text-teal-500">
+			<a href="{base}/whoami">Whoami</a>
+		</li>
+		<li class="px-3 py-1 transition hover:scale-105 hover:text-teal-500">
+			<a href="{base}/blog">Blog</a>
+		</li>
+		<li class="px-3 py-1 transition hover:scale-105 hover:text-teal-500">
+			<a href="{base}/api/rss.xml">RSS</a>
+		</li>
+	</ul>
 </nav>
 
 {#key data.currentRoute}
-	<main in:fade={{ duration: 150, delay: 150 }} out:fade={{ duration: 150 }}>
+	<main class="flex-1" in:fade={{ duration: 75, delay: 75 }} out:fade={{ duration: 75 }}>
 		<slot />
 	</main>
 {/key}

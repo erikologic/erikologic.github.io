@@ -10,7 +10,7 @@
 	<meta property="article:modified_time" content={data.meta.modifiedDate} />
 </svelte:head>
 
-<article>
+<article class="prose">
 	<h1>{data.meta.title}</h1>
 	<p>Published: {data.meta.publishedDate}</p>
 	{#if data.meta.image}
