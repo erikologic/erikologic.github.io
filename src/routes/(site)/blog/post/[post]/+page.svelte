@@ -21,6 +21,8 @@
 	<svelte:component this={data.PostContent} />
 </article>
 
+<!-- TODO how does it works for article pictures? -->
+
 <!-- svelte-ignore css-unused-selector -->
 <style>
 	.hero-image img {
