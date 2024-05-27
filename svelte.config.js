@@ -4,7 +4,7 @@ import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import remarkToc from 'remark-toc';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
-
+import projectConfig from './src/lib/config.js';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
@@ -24,6 +24,9 @@ const config = {
 		adapter: adapter({
 			fallback: '404.html'
 		}),
+		prerender: {
+			origin: projectConfig.domain
+		},
 		paths: {
 			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
 		}

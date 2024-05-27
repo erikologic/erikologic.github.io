@@ -17,7 +17,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta charset="UTF-8" />
 	<meta property="twitter:card" content="summary_large_image" />
-	<!-- TODO  $page.url === http://sveltekit-prerender/... -->
 	<meta property="og:url" content={$page.url.toString()} />
 	<meta property="og:site_name" content={config.title} />
 	<meta property="og:title" content={`${$page.data.meta.title} - ${config.title}`} />
