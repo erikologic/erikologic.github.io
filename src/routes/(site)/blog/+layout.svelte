@@ -7,7 +7,7 @@
 <!-- TODO Breadcrumbs -->
 <!-- <h1>Blog -> Tag: ALL -> Page 1</h1> -->
 
-<aside class="prose">
+<aside class="prose mb-12 mt-8">
 	<h2>Most recent posts</h2>
 	<ul>
 		{#each data.recentPosts as post}
@@ -16,7 +16,7 @@
 			</li>
 		{/each}
 	</ul>
-	<h2><a href="{base}/blog/tag">Tags</a></h2>
+	<h3><a href="{base}/blog/tag">Tags</a></h3>
 	<ul>
 		{#each data.tags as tag}
 			<li>
@@ -26,4 +26,6 @@
 	</ul>
 </aside>
 
-<slot />
+<main>
+	<slot />
+</main>

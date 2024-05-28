@@ -4,8 +4,8 @@
 	export let data;
 </script>
 
-<div class="prose">
-	<h3>Blog entries</h3>
+<div class="prose flex-col">
+	<h2>Blog entries</h2>
 	<ul>
 		{#each data.posts as post}
 			<li>
