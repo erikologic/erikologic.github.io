@@ -7,9 +7,10 @@
 		%sveltekit.head%
 	</head>
 
-	<body data-sveltekit-preload-data="hover" class="bg-stone-200">
-		<div class="m-auto flex min-h-full max-w-screen-lg flex-col bg-stone-100 px-8">
-			%sveltekit.body%
-		</div>
+	<body
+		data-sveltekit-preload-data="hover"
+		class="flex flex-col bg-stone-200 *:m-auto *:w-full *:max-w-screen-lg *:bg-stone-100"
+	>
+		%sveltekit.body%
 	</body>
 </html>
