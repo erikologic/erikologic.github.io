@@ -1,4 +1,4 @@
-<div class="prose">
+<main class="prose">
 	<h1>Whoami</h1>
 	<ul>
 		<li>Love delivering solutions that significantly improve others’ lives.</li>
@@ -8,4 +8,4 @@
 	</ul>
 	<h2>Skillset</h2>
 	<p>Typescript, Python, Go, Java, Ruby | React | AWS | Postgre, DynamoDB, etc</p>
-</div>
+</main>

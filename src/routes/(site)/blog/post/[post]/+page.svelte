@@ -10,16 +10,18 @@
 	<meta property="article:modified_time" content={data.meta.modifiedDate} />
 </svelte:head>
 
-<article class="prose">
-	<h1>{data.meta.title}</h1>
-	<p>Published: {data.meta.publishedDate}</p>
-	{#if data.meta.image}
-		<div class="hero-image">
-			<enhanced:img src={data.EnhancedImage} alt={data.meta.image.alt} />
-		</div>
-	{/if}
-	<svelte:component this={data.PostContent} />
-</article>
+<main>
+	<article class="prose">
+		<h1>{data.meta.title}</h1>
+		<p>Published: {data.meta.publishedDate}</p>
+		{#if data.meta.image}
+			<div class="hero-image">
+				<enhanced:img src={data.EnhancedImage} alt={data.meta.image.alt} />
+			</div>
+		{/if}
+		<svelte:component this={data.PostContent} />
+	</article>
+</main>
 
 <!-- TODO how does it works for article pictures? -->
 

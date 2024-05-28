@@ -4,7 +4,7 @@
 	export let data;
 </script>
 
-<div class="prose">
+<main class="prose">
 	<h3>Some raw tags count</h3>
 	<ul>
 		{#each data.tags as { tag, count }}
@@ -15,4 +15,4 @@
 			</ul>
 		{/each}
 	</ul>
-</div>
+</main>

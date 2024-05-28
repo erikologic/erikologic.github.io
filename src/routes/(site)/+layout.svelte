@@ -56,7 +56,7 @@
 </nav>
 
 {#key data.currentRoute}
-	<main class="flex-1" in:fade={{ duration: 75, delay: 75 }} out:fade={{ duration: 75 }}>
+	<div class="flex-1" in:fade={{ duration: 75, delay: 75 }} out:fade={{ duration: 75 }}>
 		<slot />
-	</main>
+	</div>
 {/key}

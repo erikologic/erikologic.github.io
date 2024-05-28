@@ -1,4 +1,4 @@
-<div class="prose">
+<main class="prose">
 	<h1>Hey there 👋👋👋</h1>
 
 	<p>
@@ -6,4 +6,4 @@
 		Well, I have been procrastinating this for years so let's just ship something and iterate...<br
 		/>
 	</p>
-</div>
+</main>
