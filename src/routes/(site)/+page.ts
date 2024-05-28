@@ -1,6 +1,6 @@
 import type { BasePageData } from '$lib/types/basePageData';
 
-// TODO use in other places
+// TODO use this type in other places
 export const load = async (): Promise<BasePageData> => {
 	return {
 		meta: {
