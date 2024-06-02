@@ -7,7 +7,7 @@
 <!-- TODO Breadcrumbs -->
 <!-- <h1>Blog -> Tag: ALL -> Page 1</h1> -->
 
-<aside class="prose mb-12 mt-8">
+<aside class="prose mb-12 flex-1 px-8">
 	<h2>Most recent posts</h2>
 	<ul>
 		{#each data.recentPosts as post}

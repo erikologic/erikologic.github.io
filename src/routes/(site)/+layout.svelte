@@ -48,8 +48,8 @@
 	{/if}
 </svelte:head>
 
-<header>
-	<nav class="mb-4">
+<header class="mb-4">
+	<nav>
 		<ul class="flex justify-center">
 			<li class="px-3 py-1 transition hover:scale-105 hover:text-teal-500">
 				<a href="{base}/">Home</a>
