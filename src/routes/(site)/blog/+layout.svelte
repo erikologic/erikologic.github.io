@@ -7,8 +7,8 @@
 <!-- TODO Breadcrumbs -->
 <!-- <h1>Blog -> Tag: ALL -> Page 1</h1> -->
 
-<div class="flex flex-col lg:flex-row">
-	<aside class="prose mb-12 px-8 lg:w-72">
+<div class="flex">
+	<aside class="prose mb-12 hidden w-72 px-8 lg:[display:unset]">
 		<h2>Most recent posts</h2>
 		<ul>
 			{#each data.recentPosts as post}
