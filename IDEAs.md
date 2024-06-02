@@ -18,6 +18,15 @@
 
 ### Serverless patterns
 
+### How we became a DORA elite team
+
+### O11y FE
+
+- customer id
+- FingerprintJS
+- \*StorageIDS
+- Trigger >400
+
 ## Personal finance
 
 ### Divest for good
