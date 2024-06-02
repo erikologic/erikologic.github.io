@@ -1,13 +1,10 @@
 <script lang="ts">
 	import { base } from '$app/paths';
-	import { fade } from 'svelte/transition';
 	import { page } from '$app/stores';
 
 	import config from '$lib/config';
 
 	import '../../app.css';
-
-	export let data;
 </script>
 
 <svelte:head>
@@ -57,8 +54,4 @@
 	</nav>
 </header>
 
-{#key data.currentRoute}
-	<div class="flex-1 px-8" in:fade={{ duration: 75, delay: 75 }} out:fade={{ duration: 75 }}>
-		<slot />
-	</div>
-{/key}
+<slot />
