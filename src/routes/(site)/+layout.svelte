@@ -38,22 +38,24 @@
 	{/if}
 </svelte:head>
 
-<nav class="mb-4">
-	<ul class="flex justify-center">
-		<li class="px-3 py-1 transition hover:scale-105 hover:text-teal-500">
-			<a href="{base}/">Home</a>
-		</li>
-		<li class="px-3 py-1 transition hover:scale-105 hover:text-teal-500">
-			<a href="{base}/whoami">Whoami</a>
-		</li>
-		<li class="px-3 py-1 transition hover:scale-105 hover:text-teal-500">
-			<a href="{base}/blog">Blog</a>
-		</li>
-		<li class="px-3 py-1 transition hover:scale-105 hover:text-teal-500">
-			<a href="{base}/api/rss.xml">RSS</a>
-		</li>
-	</ul>
-</nav>
+<header>
+	<nav class="mb-4">
+		<ul class="flex justify-center">
+			<li class="px-3 py-1 transition hover:scale-105 hover:text-teal-500">
+				<a href="{base}/">Home</a>
+			</li>
+			<li class="px-3 py-1 transition hover:scale-105 hover:text-teal-500">
+				<a href="{base}/whoami">Whoami</a>
+			</li>
+			<li class="px-3 py-1 transition hover:scale-105 hover:text-teal-500">
+				<a href="{base}/blog">Blog</a>
+			</li>
+			<li class="px-3 py-1 transition hover:scale-105 hover:text-teal-500">
+				<a href="{base}/api/rss.xml">RSS</a>
+			</li>
+		</ul>
+	</nav>
+</header>
 
 {#key data.currentRoute}
 	<div class="flex-1 px-8" in:fade={{ duration: 75, delay: 75 }} out:fade={{ duration: 75 }}>
