@@ -2,12 +2,10 @@
 import { getPosts, getTags } from '$lib/assets/js/utils/posts';
 
 // export const load = async ({ params }): Promise<BasePageData> => {
-export const load = async ({ url }) => {
+export const load = async () => {
 	// TODO limit
 	const tags = (await getTags({ limit: 5 })).map(({ tag }) => tag);
 	const recentPosts = await getPosts({ limit: 10 });
-
-	const currentRoute = url.pathname;
 
 	return {
 		meta: {
@@ -15,7 +13,6 @@ export const load = async ({ url }) => {
 			description: `List of all blog tags`
 		},
 		tags: ['all', ...tags],
-		recentPosts,
-		currentRoute
+		recentPosts
 	};
 };
