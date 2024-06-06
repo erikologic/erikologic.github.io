@@ -29,6 +29,10 @@
 
 ### TF ordering
 
+### Compounding & tech debt vs tech credit
+
+e.g. a 3% of tech debt each release vs a 3% of tech credit each release
+
 - https://netmemo.github.io/post/tf-map-ordering/
 
 ## Personal finance
