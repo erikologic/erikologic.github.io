@@ -35,6 +35,10 @@ e.g. a 3% of tech debt each release vs a 3% of tech credit each release
 
 - https://netmemo.github.io/post/tf-map-ordering/
 
+### Conf -> RSJF -> Router
+
+Also https://stackoverflow.com/questions/64092736/alternative-to-switch-statement-for-typescript-discriminated-union !
+
 ## Personal finance
 
 ### Divest for good
