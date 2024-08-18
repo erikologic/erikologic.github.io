@@ -17,6 +17,11 @@
 - mention serverless test patterns!
 
 ### Serverless patterns
+???
+
+### Telling an observable story
+
+- use logging and tracing for tracking the story of your app
 
 ### How we became a DORA elite team
 
