@@ -18,6 +18,7 @@
 
 ### Serverless patterns
 ???
+I think it was about hex arch with serverless
 
 ### Telling an observable story
 
