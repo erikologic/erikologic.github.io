@@ -43,7 +43,7 @@ e.g. a 3% of tech debt each release vs a 3% of tech credit each release
 
 ### Conf -> RSJF -> Router
 
-Also https://stackoverflow.com/questions/64092736/alternative-to-switch-statement-for-typescript-discriminated-union !
+Also https://stackoverflow.com/questions/64092736/alternative-to-switch-statement-for-typescript-discriminated-union !!
 
 ## Personal finance
 
