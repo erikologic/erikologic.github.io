@@ -26,20 +26,26 @@ I think it was about hex arch with serverless
 
 ### How we became a DORA elite team
 
+### How we won at...
+
+- automation
+- o11y
+- clean arch
+
 ### O11y FE
 
 - customer id
 - FingerprintJS
-- \*StorageIDS
+- (Local,Session)StorageId / RefreshId
 - Trigger >400
 
 ### TF ordering
 
+- https://netmemo.github.io/post/tf-map-ordering/
+
 ### Compounding & tech debt vs tech credit
 
 e.g. a 3% of tech debt each release vs a 3% of tech credit each release
-
-- https://netmemo.github.io/post/tf-map-ordering/
 
 ### Conf -> RSJF -> Router
 
