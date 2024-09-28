@@ -119,14 +119,14 @@ Immediately, most of the services would start emitting telemetry with things lik
 Bob also built a board to visualise this data.  
 Thanks to HoneyComb query/data viz capabilities like the GROUP clause, the board would be quite dynamic and flexible: e.g. adding a service would not require changes to the board, HoneyComb would just visualise another line in a time-series view with a different name.
 
-Once the Adapter work got connected, people realised the power of HoneyComb: e.g. from the generic widget showing the number of metrics being ingested across several services, with two clicks, we would be able to read the query run on one particular runtime and observe the rest its performance.  
+Once the Adapter work got connected, people realised the power of HoneyComb: e.g. from the generic widget showing the number of metrics being ingested across several services, with two clicks, we would be able to read the query run on one particular runtime and observe the rest the runtime performance.  
 Most of this was achieved effortlessly.
 
 _LESSON #6: It's common to automate the "what is failing" scenario, but what about the "what if things are so so" one? This was a very interesting finding..._
 
-Bob created another interesting board, the "annoyance alarm".  
+Bob created another interesting board called "customer annoyance".  
 Any webapp HTTP query that would take >400 ms would be reported.  
-It is not technically an error (or potentially is?), nor an infringement of agreed business terms, but it is a good indicator of the current customer experience - and its evolution.
+It is not technically an error (or potentially is?), nor an infringement of agreed business terms, but it is a good indicator of the evolution of the customer experience.
 
 ## Alarm on real biz issues
 
@@ -147,8 +147,8 @@ If such failure arose, only the right persons would be notified, and they would 
 _LESSON #7: Setting up alarms that were able to factor in different components had revealed a game changer in nulling our alarm fatigue. I found it extremely cool, and I have received some extremely good feedback for it._
 
 At some point, we improved this further by adding some conditionality to the triggers.  
-We added a service upstream that was deciding whether it would be time to trigger the workflow that would eventually send this MQTT data or not.  
-We logged the upstream service decision into telemetry and used it as an alternative signal for that alarm so that HoneyComb could confirm we either decided not to trigger the downstream workflow or we had sent that MQTT data out.
+At the time, we added a service upstream that was deciding whether it would be time to trigger the workflow that would eventually send this MQTT data or not.  
+We decided to log the upstream service decision into telemetry and used it as an alternative signal for that alarm, so that HoneyComb could monitor if we either decided not to trigger the downstream workflow or we had sent that MQTT data out, and raise an alarm in case these conditions were both not met.
 
 ## SLO
 
@@ -177,5 +177,5 @@ We had several boards in every aspect of Engineering that were providing data to
 
 During my last period at CarbonRe, I often mentioned that I would find it hard to work again in an environment without that level of observability and understanding of how the software operated in production - a feeling that was often reflected by my colleagues.
 
-How do you feel about O11y? Do you have any experience to share?  
+And you? How do you feel about O11y? Do you have any experience to share?  
 Gimme a buzz on [LinkedIn](https://www.linkedin.com/in/enrico-graziani-10ba5a140/) if you are interested in discussing this further!
