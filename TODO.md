@@ -1,4 +1,4 @@
-# Some ideas
+# Ideas
 
 ## Tech
 
@@ -30,7 +30,6 @@ I think it was about hex arch with serverless
 ### How we won at...
 
 - automation
-- o11y
 - clean arch
 
 ### O11y FE
@@ -57,3 +56,7 @@ Also https://stackoverflow.com/questions/64092736/alternative-to-switch-statemen
 ### Divest for good
 
 ### Compound & automatic millionaire
+
+# Todo
+
+- broke navigation on prod: home -> blog -> whoami
