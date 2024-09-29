@@ -1,7 +1,7 @@
 ---
 title: 'How we won at O11y'
-publishedDate: '2024-09-28'
-modifiedDate: '2024-09-28'
+publishedDate: '2024-09-29'
+modifiedDate: '2024-09-29'
 tags:
   - o11y
 description: Some notes on how I helped convert CarbonRe into an Observability house.
@@ -25,23 +25,19 @@ There have been some attempts at adding some sort of monitoring and alarming, bu
 Bob, my manager, asked me to change this and bring that observability mentality we had at Cazoo.  
 In his experience, you would get enormous value from instrumenting “everything”, and he was eager for us to become a HoneyComb house.
 
-This article recalls what made us go from 0 to full observability.  
+This article recalls what made us go from 0 to "full observability".  
 It is intended as a future reference for me, but also as an example for others on what it could take to move an organisation while providing some learning lessons.
 
 ## Which observability? Why? How?
 
-When I say "observability", what I'm thinking is [Charity Majors' Observability 2.0](https://charity.wtf/tag/observability-2-0/):
-
-- wide structured spans, mainly
-- high-cardinality
-- the ability to freely dice and slice your collected data and move easily between the forest and the trees
-
-More important is the idea that our systems are observable in production, and we would be able to comfortably answer any _unknown_ that might arise without the need to set up further instrumentation in the aftermath.
+When I say "observability", what I'm thinking is [Charity Majors' Observability 2.0](https://charity.wtf/tag/observability-2-0/).  
+It is the idea that our systems are observable in production, and we would be able to comfortably answer any _unknown_ that might arise without the need to set up further instrumentation in the aftermath.  
+This can only be achieved with collecting wide structured high-cardinal events and analysing them through a platform that allows you to freely dice and slice your collected data and move easily between the forest and the trees.
 
 Our stack was based on OpenTelemetry and HoneyComb (incidentally, Charity is the CTO there) - quick info on the why:
 
 - OpenTelemetry is probably today’s standard for handling observability telemetries (event, spans, metrics, logs, ...)
-- HoneyComb is a data store and query engine for telemetries, offering the capability to receive and display well multi-dimensional high-cardinal events, offering tools to quickly move between aggregation and deeply detailed views.
+- HoneyComb is a data store and query engine for telemetries capable of analysing your collected data in the way required for Observability 2.0.
 
 ## FE instrumentation
 
