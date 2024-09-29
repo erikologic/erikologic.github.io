@@ -22,6 +22,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - run: echo BASE_PATH --> "${{ github.event.repository.name != format('{0}.github.io', github.repository_owner) && format('/{0}', github.event.repository.name) || '' }}"
+
       - name: build
         env:
           BASE_PATH: ${{ github.event.repository.name != format('{0}.github.io', github.repository_owner) && format('/{0}', github.event.repository.name) || '' }}
