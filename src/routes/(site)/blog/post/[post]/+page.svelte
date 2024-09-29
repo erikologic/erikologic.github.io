@@ -12,7 +12,11 @@
 
 <article class="prose">
 	<h1>{data.meta.title}</h1>
-	<p>Published: {data.meta.publishedDate}</p>
+	<ul>
+		<li>Reading time: {data.meta.readingMins} min</li>
+		<li>Published: {data.meta.publishedDate}</li>
+		<li>Text: {data.meta.text}</li>
+	</ul>
 	{#if data.meta.image}
 		<div class="hero-image">
 			<enhanced:img src={data.EnhancedImage} alt={data.meta.image.alt} />
