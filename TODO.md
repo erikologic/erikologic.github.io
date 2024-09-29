@@ -60,4 +60,3 @@ Also https://stackoverflow.com/questions/64092736/alternative-to-switch-statemen
 # Todo
 
 - broke navigation on prod: home -> blog -> whoami
-- time of read

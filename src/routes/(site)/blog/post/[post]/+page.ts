@@ -19,6 +19,7 @@ export const load = async ({ params: { post }, url }) => {
 			tags: myPost.tags,
 			publishedDate: myPost.publishedDate,
 			modifiedDate: myPost.modifiedDate,
+			readingMins: myPost.readingMins,
 			...(myPost.imageFile && {
 				image: {
 					url: url.origin + getImageUrl(myPost.imageFile),

@@ -57,5 +57,8 @@
 			"prettier --ignore-unknown --write ",
 			"eslint --fix "
 		]
+	},
+	"dependencies": {
+		"mdsvex-reading-time": "^1.0.5"
 	}
 }

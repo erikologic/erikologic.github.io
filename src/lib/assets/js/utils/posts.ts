@@ -6,6 +6,7 @@ const postSchema = z.object({
 	description: z.string(),
 	publishedDate: z.string(),
 	modifiedDate: z.string().optional(),
+	readingMins: z.number(),
 	tags: z.array(z.string()),
 	imageFile: z.string().optional(),
 	imageAlt: z.string().optional(),
@@ -24,7 +25,12 @@ const posts: Post[] = Object.entries(
 		([path, data]: [string, any]) => {
 			const slug = path.split('/').pop()!.split('.').shift();
 			try {
-				return postSchema.parse({ ...data.metadata, slug, PostContent: data.default });
+				return postSchema.parse({
+					...data.metadata,
+					slug,
+					PostContent: data.default,
+					readingMins: data.metadata.readingTime.minutes
+				});
 			} catch (e) {
 				console.error(`Error parsing metadata for post ${slug}: ${e}`);
 				throw e;

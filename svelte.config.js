@@ -3,8 +3,10 @@ import { mdsvex } from 'mdsvex';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import remarkToc from 'remark-toc';
+import readingTime from 'mdsvex-reading-time';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import projectConfig from './src/lib/config.js';
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
@@ -13,7 +15,7 @@ const config = {
 		vitePreprocess(),
 		mdsvex({
 			extensions: ['.md'],
-			remarkPlugins: [remarkToc],
+			remarkPlugins: [remarkToc, readingTime],
 			rehypePlugins: [rehypeSlug, [rehypeAutolinkHeadings, { behavior: 'wrap' }]]
 		})
 	],
