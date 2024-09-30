@@ -68,3 +68,15 @@
 </header>
 
 <slot />
+
+<footer class="mb-2">
+	<ul class="flex justify-center">
+		<li class="px-3 py-1">@Enrico Graziani</li>
+		<li class="px-3 py-1 transition hover:scale-105 hover:text-teal-500">
+			<a href="https://www.linkedin.com/in/enrico-graziani-10ba5a140/">Linkedin</a>
+		</li>
+		<li class="px-3 py-1 transition hover:scale-105 hover:text-teal-500">
+			<a href="https://github.com/erikologic/">GitHub</a>
+		</li>
+	</ul>
+</footer>
