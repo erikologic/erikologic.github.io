@@ -1,5 +1,5 @@
 ---
-title: 'How we won at O11y'
+title: 'How we won the O11y game at CarbonRe'
 publishedDate: '2024-09-29'
 modifiedDate: '2024-09-29'
 tags:
@@ -26,7 +26,7 @@ Bob, my manager, asked me to change this and bring that observability mentality 
 In his experience, you would get enormous value from instrumenting “everything”, and he was eager for us to become a HoneyComb house.
 
 This article recalls what made us go from 0 to "full observability".  
-It is intended as a future reference for me, but also as an example for others on what it could take to move an organisation while providing some learning lessons.
+It is intended as a future reference for me, but also as an example for others on what it could take to move an organisation, while providing some learning lessons.
 
 ## Which observability? Why? How?
 
@@ -58,9 +58,9 @@ It felt frustrating.
 
 Soon, we started transitioning from a service-based to a serverless approach, using the Serverless framework.
 
-I wrote a plugin to auto-instrument our lambdas so that we would start collecting telemetries without engineers even being aware it was happening.
+I wrote a plugin to auto-instrument our lambdas so that we would start collecting telemetries without engineers even being aware it was happening.  
+_For us, this plugin was kind of required because we were using the Pants build system and that came with its quirks. You probably don't have to go this far._
 
-_For us, this plugin was kind of required because we were using the Pants build system and that came with its quirks. You probably don't have to go this far._  
 The [OTel Lambda page](https://opentelemetry.io/docs/faas/lambda-auto-instrument/) is a good starting point for learning how to start collecting Lambda telemetries.  
 _Note: at the time I was working on this, OTel and AWS diverged on docs and practices, so information on the web was kind of complex to navigate._
 
@@ -68,9 +68,9 @@ _Note: at the time I was working on this, OTel and AWS diverged on docs and prac
 
 _LESSON #2: Sometimes, you need to plant the seeds and patiently wait for harvest time rather than just reach for the lower-hanging fruits._
 
-Once I started collecting telemetries, I... did nothing!
+Once I started collecting telemetries, I did... nothing!
 
-After my previous failure, I agreed with my manager to adopt a passive approach.  
+After my previous failure, I previously agreed with my manager to adopt a passive approach.  
 Whenever questions would pop up on Slack, I would answer them with HoneyComb query links, possibly comparing them with CloudWatch Logs and/or Sentry.  
 1-2 times a week, I would spend some minutes digging around in HoneyComb and provide some novel insights in Slack.
 
@@ -80,7 +80,7 @@ _LESSON #3: asking for behavioural change is an extremely complex request, peopl
 
 At some point, I set up a business-wide meeting.  
 I explained the need for multi-dimensional high-cardinal events, using a high-street shop as an example.  
-I explained the three pillars: Metrics, Logs and Events.  
+I explained the three pillars: Events, Logs and Metrics.  
 I added a wow factor at the end by embedding a face detection ML model into the FE app, connecting it with the webcam and the OTel library, and showing when our Product Owner was looking at the web app from a HoneyComb query page.  
 _Although understanding engagement patterns was a huge problem for us at the time, luckily, nobody in the business wanted that feature deployed to production!_  
 Finally, I invited people to connect on Slack #o11y for any type of request.
@@ -105,7 +105,7 @@ _LESSON #5: Good coding practices have unpredictably good ROI._
 
 One turning point was reached while we were making our new serverless data pipeline ready for production.  
 We had long agreed to adopt a Ports & Adapters design architecture.  
-Bob instrumented part of the pipeline custom data mangling operations metrics, for which he wrote a module with constants and functions. I refactored some Adapters to use those.  
+Bob instrumented part of the pipeline with custom data-mangling metrics, for which he wrote a module with constants and functions. I refactored some Adapters to use those.  
 Immediately, most of the services would start emitting telemetry with things like:
 
 - the actual SQL query against the DB and parameters
@@ -115,7 +115,7 @@ Immediately, most of the services would start emitting telemetry with things lik
 Bob also built a board to visualise this data.  
 Thanks to HoneyComb query/data viz capabilities like the GROUP clause, the board would be quite dynamic and flexible: e.g. adding a service would not require changes to the board, HoneyComb would just visualise another line in a time-series view with a different name.
 
-Once the Adapter work got connected, people realised the power of HoneyComb: e.g. from the generic widget showing the number of metrics being ingested across several services, with two clicks, we would be able to read the query run on one particular runtime and observe the rest the runtime performance.  
+Once the Adapter work got connected, people realised the power of HoneyComb: e.g. from the generic widget showing the number of metrics being ingested across several services, with two clicks, we would be able to read the query run on one particular runtime and observe the rest of the runtime performance.  
 Most of this was achieved effortlessly.
 
 _LESSON #6: It's common to automate the "what is failing" scenario, but what about the "what if things are so so" one? This was a very interesting finding..._
@@ -167,11 +167,11 @@ Also, there was a general lack of trust in the alarming systems and widespread a
 When I left, the whole business was much sold on alarming, and feeling confident that our toolings would advise if our customers were experiencing any sort of reduced services.  
 Also, a culture of curiosity picked up about understanding how services were running in production: what were their performance, how well they were doing, who was using them, what were the patterns. I was pleased to see engineers poking at HoneyComb and exchanging links just for sheer curiosity!
 
-Debugging live issues was a breeze: the last month I was there, the Mean Time to Restore was around 56 mins (30 minutes being the CICD pipeline).
+Debugging live issues was a breeze: the last month I was there, the Mean Time to Restore was around 56 mins (~30 minutes being the CICD pipeline).
 
 We had several boards in every aspect of Engineering that were providing data to support decisions: which features were mostly used by our customers, which services were giving us the most problems and required more love, how bad AWS Timestream performances were from time to time and why we needed to work out a replacement soon; which CICD jobs were adding the most delays to landing commits in production; etc...
 
 During my last period at CarbonRe, I often mentioned that I would find it hard to work again in an environment without that level of observability and understanding of how the software operated in production - a feeling that was often reflected by my colleagues.
 
-And you? How do you feel about O11y? Do you have any experience to share?  
+And you? How do you feel about O11y? Do you have any experience to share? Got any questions?  
 Gimme a buzz on [LinkedIn](https://www.linkedin.com/in/enrico-graziani-10ba5a140/) if you are interested in discussing this further!
