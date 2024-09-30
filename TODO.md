@@ -58,5 +58,3 @@ Also https://stackoverflow.com/questions/64092736/alternative-to-switch-statemen
 ### Compound & automatic millionaire
 
 # Todo
-
-- broke navigation on prod: home -> blog -> whoami
