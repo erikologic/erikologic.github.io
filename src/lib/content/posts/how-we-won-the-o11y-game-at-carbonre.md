@@ -4,6 +4,7 @@ publishedDate: '2024-09-29'
 modifiedDate: '2024-09-29'
 tags:
   - o11y
+  - work experiences
 description: Some notes on how I helped convert CarbonRe into an Observability house.
 ---
 
