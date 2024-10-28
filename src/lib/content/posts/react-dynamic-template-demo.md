@@ -16,7 +16,7 @@ TLDR:
 - Overcame initial technical and design disagreements, delivering a versatile solution with minimal maintenance
 - Other key features included configuration aliasing, versioning, and optimistic concurrency
 
-# React Dynamic Template Demo
+## Contents
 
 ## Who's this blog post for?
 
@@ -63,7 +63,7 @@ From my user research, I gathered these key requirements:
 
 - Feature parity, including replicating the current various configurations in the new system:
   - Different configurations for different clients/environments
-  - Configure dynamically different pages, including supporting routing and NavBar appearance
+  - Dynamically configure different pages, including supporting routing and NavBar appearance
   - Support for different types of components/sections for the different pages/templates
 - Edit configuration via forms, with potential JSON editor support
 - Test configurations in production (with real data) without impacting the customer experience
@@ -77,6 +77,8 @@ From these, I proposed the project:
 - Each template would declare its configuration as JSON schema and/or TypeScript-supported definitions.
 - Adding a new template would involve minimal code repetition.
 - Configuration declarations would be used to dynamically generate forms and potentially validate code in the editor.
+- When the app would load, it would fetch the configuration from DynamoDB.
+- This configuration would drive the routing, the NavBar apperance, and the behaviour of different components/sections inside each page.
 - Configuration data would be stored in DynamoDB.
 - Configuration would be validated before saving.
 - Configuration would be versioned, allowing rollback if needed and enabling optimistic concurrency control.
@@ -98,11 +100,11 @@ The team was impressed with the PoC and accepted it as a viable solution.
 However, conversations soon shifted back to the form-based solution.  
 Amusingly, some of the same people who had initially advocated for forms were now unsure about them!  
 I suggested keeping both options, as maintenance would be almost none and it could potentially proove useful in the future.  
-_After I left the company, my manager contacted me on LinkedIn to let me know that no one was using the form-based solution anymore!_
+_After I left the company, my manager [contacted me on LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7242969126707630080?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7242969126707630080%2C7242970609846992897%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287242970609846992897%2Curn%3Ali%3Aactivity%3A7242969126707630080%29) to let me know that no one was using the form-based solution anymore!_
 
 ## What we delivered
 
-We delivered nearly everything I proposed:
+We delivered nearly everything I proposed in 2 weeks:
 
 - A dynamic templating system requiring minimal maintenance that allowed both form and JSON editor configuration.
 - Templates that exposed their configuration as JSON schema/TypeScript, minimising code repetition when adding new templates.
@@ -111,7 +113,7 @@ We delivered nearly everything I proposed:
 - Aliasing via URL query parameters.
 - Backend configuration storage in DynamoDB with versioning, aliasing, and optimistic concurrency support.
 
-Shortly after this, I left the company, while the following features were still in the backlog:
+Shortly after this I left the company for family reasons while the following features were still prioritised in the backlog:
 
 - An "undo" button for quick rollbacks.
 - A CI/CD step to validate the current frontend release against configurations stored in DynamoDB.
@@ -127,8 +129,7 @@ I was proud of my approach when facing strong opposition.
 I delivered the best solution I could for something I didn’t fully agree with, leaving me some time to explore my ideas, eventually winning team support.
 
 I also spent time thinking about whether to treat configuration as code or as data — a question I’m still undecided on.
-On one hand, setting up app configurations, observing changes in a safe environment, and needing version control feels a lot like a typical development process.  
-Also, the importance of versioning and "branching" configurations was clear - so why not just use git?! _Offering a diff editor was a great trick here. Bravo me!_  
+On one hand, setting up app configurations, observing changes in a safe environment, and needing version control feels a lot like a typical development process. Also, the importance of versioning and "branching" configurations was clear - so why not just use git?! _Offering a diff editor was a great trick here. Bravo me! Sorry :P_  
 On the other hand, you may want to roll back to yesterday’s software without affecting today’s configuration — so why tightly couple the two?
 
 ## Wanna know more?
