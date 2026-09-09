@@ -1,0 +1,3 @@
+# Use guardrail-first agent autonomy
+
+Project documentation is a collaboration surface where humans and agents turn discussion into durable context, decisions, and constraints without preserving raw conversations. Humans and agents establish direction and guardrails together; agents then execute autonomously within them through the smallest observable tracer bullet, using a Lean, OODA-informed feedback loop and initially returning evidence after each slice so trust and authority can expand deliberately. Architectural choices are evaluated partly by how well they support this model through fast deterministic feedback, localized changes, explicit boundaries, straightforward navigation, and observable outcomes.
