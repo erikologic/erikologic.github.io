@@ -4,6 +4,10 @@ This glossary defines the project-specific language used to discuss the author's
 
 ## Language
 
+**Home**:
+The site's brief entry point: who Enrico is, what the site is for, and where a visitor can go next.
+_Avoid_: Full biography, blog archive
+
 **Blog**:
 The site's collection of authored posts, including learning, announcements, and other writing without dividing them into separate kinds.
 _Avoid_: Content taxonomy, learning-only section
@@ -20,8 +24,8 @@ _Avoid_: Marketing stunt, AI transcript archive
 The author's independent home for their identity, writing, and work.
 _Avoid_: Project marketing surface, campaign site
 
-**Who Am I**:
-The site's public orientation to the author's identity and current direction, named after the Unix `whoami` command.
+**Whoami**:
+The site's public orientation to the author's identity, experience, values, and current direction, named after the Unix `whoami` command.
 _Avoid_: About page, résumé
 
 **Quality-first engineering**:
