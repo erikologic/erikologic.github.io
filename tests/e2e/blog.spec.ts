@@ -4,7 +4,7 @@ test('a visitor can navigate through the site map to a blog post', async ({ page
 	await page.goto('/');
 	await expect(page.getByRole('heading', { level: 1, name: "I'm Enrico." })).toBeVisible();
 
-	await page.getByRole('link', { name: 'Whoami', exact: true }).click();
+	await page.getByRole('navigation').getByRole('link', { name: 'Whoami', exact: true }).click();
 	await expect(page).toHaveURL(/\/whoami\/?$/);
 	await expect(page.getByRole('heading', { level: 1, name: 'Whoami' })).toBeVisible();
 
