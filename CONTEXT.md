@@ -4,6 +4,10 @@ This glossary defines the project-specific language used to discuss the author's
 
 ## Language
 
+**Blog**:
+The site's collection of authored posts, including learning, announcements, and other writing without dividing them into separate kinds.
+_Avoid_: Content taxonomy, learning-only section
+
 **Public learning record**:
 Writing that captures the questions, experiments, discoveries, and conclusions that shape the author's understanding over time.
 _Avoid_: Content marketing, private diary
