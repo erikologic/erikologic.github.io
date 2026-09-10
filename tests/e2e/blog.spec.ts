@@ -2,7 +2,7 @@ import { expect, test } from '@playwright/test';
 
 test('a visitor can navigate through the site map to a blog post', async ({ page }) => {
 	await page.goto('/');
-	await expect(page.getByRole('heading', { level: 1, name: "I'm Enrico." })).toBeVisible();
+	await expect(page.getByRole('heading', { level: 1, name: 'Hi! 👋' })).toBeVisible();
 
 	await page.getByRole('navigation').getByRole('link', { name: 'Whoami', exact: true }).click();
 	await expect(page).toHaveURL(/\/whoami\/?$/);
@@ -16,4 +16,8 @@ test('a visitor can navigate through the site map to a blog post', async ({ page
 	await firstPost.click();
 
 	await expect(page.getByRole('heading', { level: 1, name: title })).toBeVisible();
+	await expect(page.locator('meta[property="og:image"]')).not.toHaveAttribute(
+		'content',
+		/blog-placeholder/,
+	);
 });
